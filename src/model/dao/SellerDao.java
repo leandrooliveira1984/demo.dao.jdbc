@@ -10,6 +10,4 @@ public interface SellerDao {
 	void deleteById(Integer id); // exlcui do banco de dados a partir do recebimento de um ID
 	Seller findById(Integer id); // pega o ID e consulta no banco de dados
 	List<Seller> findAll(); // listar todos os departamentos
-	}
-
-
+}
