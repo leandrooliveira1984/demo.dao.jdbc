@@ -1,7 +1,6 @@
 package application;
 
 import java.util.Date;
-
 import model.entities.Department;
 import model.entities.Seller;
 
