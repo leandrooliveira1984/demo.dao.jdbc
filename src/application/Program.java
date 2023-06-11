@@ -12,9 +12,9 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-				
-		Seller seller = sellerDao.findById(3);
 		
+		System.out.println("=== Test 1: seller findById ===");				
+		Seller seller = sellerDao.findById(3);		
 		System.out.println(seller);
 		
 		sc.close();
