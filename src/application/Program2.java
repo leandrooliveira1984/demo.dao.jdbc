@@ -3,6 +3,8 @@ package application;
 import java.util.List;
 import java.util.Scanner;
 
+import org.graalvm.compiler.nodes.extended.GetClassNode;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -22,8 +24,12 @@ public class Program2 {
 		System.out.println("\n=== Test 2: department findAll ===");
 		List<Department> list = departmentDao.findAll();
 		for (Department dep : list) {
-			System.out.println(dep); //Para cada Seller obj da lista list, imprima na tela o obj.
+			System.out.println(dep); //Para cada Department dep da lista list, imprima na tela o dep.
 		}
+		System.out.println("\n=== Test 3: insert Department ===");
+		Department newDepartment = new Department(null, "Music");
+		departmentDao.insert(newDepartment);
+		System.out.println("Insert complete: " + newDepartment.getId());
 		
 		
 		sc.close();
