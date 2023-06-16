@@ -36,7 +36,20 @@ public class Program {
 		System.out.println("\n=== Test 4: seller insert ===");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
-		System.out.println("Inserted! New ID = " + newSeller.getId());
+		System.out.println("Inserted! New ID = " + newSeller.getId());		
+		
+		System.out.println("\n=== Test 5: seller update ===");
+		seller = sellerDao.findById(1); // procurar e carrega um vendedor qualquer
+		seller.setName("Martha Waine"); // a partir do seller, setar um novo nome para ele
+		sellerDao.update(seller);
+		System.out.println("Update Complete");
+		
+		System.out.println("\n=== Test 6: seller delete ===");
+		System.out.println("Enter id for delete test: ");
+		int id = sc.nextInt();
+		sellerDao.deleteById(id);
+		System.out.println("Delete Complete");
+		
 		sc.close();
 	}
 
