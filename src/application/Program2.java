@@ -25,15 +25,23 @@ public class Program2 {
 			System.out.println(dep); //Para cada Department dep da lista list, imprima na tela o dep.
 		}
 		/*System.out.println("\n=== Test 3: insert Department ===");
-		Department newDepartment = new Department(null, "Music");
+		Department newDepartment = new Department(null, "Cliente");
 		departmentDao.insert(newDepartment);
-		System.out.println("Insert complete: " + newDepartment.getId());*/
+		System.out.println("Insert complete: " + newDepartment.getId());
 		
-		System.out.println("\n=== Test 4: delete Department ===");
+		/*System.out.println("\n=== Test 4: delete Department ===");
 		System.out.println("Enter id for delete test: ");
 		int id = sc.nextInt();
 		departmentDao.deleteById(id);
-		System.out.println("Delete Completed");
+		System.out.println("Delete Completed");*/
+		
+		System.out.println("\n=== Test 3: insert Department ===");
+		Department department2 = departmentDao.findById(8);
+		department2.setName("Clientes");
+		departmentDao.update(department2);
+		System.out.println("Update complete");
+		
+		
 		
 		sc.close();
 	}
