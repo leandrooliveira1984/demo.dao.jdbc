@@ -1,14 +1,12 @@
 package application;
 
 import java.util.List;
-import java.util.Scanner;
 
-import org.graalvm.compiler.nodes.extended.GetClassNode;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 public class Program2 {
 
@@ -26,11 +24,16 @@ public class Program2 {
 		for (Department dep : list) {
 			System.out.println(dep); //Para cada Department dep da lista list, imprima na tela o dep.
 		}
-		System.out.println("\n=== Test 3: insert Department ===");
+		/*System.out.println("\n=== Test 3: insert Department ===");
 		Department newDepartment = new Department(null, "Music");
 		departmentDao.insert(newDepartment);
-		System.out.println("Insert complete: " + newDepartment.getId());
+		System.out.println("Insert complete: " + newDepartment.getId());*/
 		
+		System.out.println("\n=== Test 4: delete Department ===");
+		System.out.println("Enter id for delete test: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Delete Completed");
 		
 		sc.close();
 	}
